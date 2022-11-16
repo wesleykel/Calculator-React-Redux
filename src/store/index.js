@@ -119,6 +119,7 @@ const counterSlice = createSlice({
     allClear(state, action) {
       state.total = null;
       state.counter = [];
+      state.symbol = "";
       console.log("all clear");
     },
 

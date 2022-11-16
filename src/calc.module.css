@@ -1,0 +1,64 @@
+.wrapper {
+  margin: 0 auto;
+  border: 1px solid black;
+  width: 30vw;
+  height: 80vh;
+}
+
+.screen {
+  border: 1px solid black;
+  height:13vh;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+ 
+
+
+
+}
+
+.topScreen{
+   /*border: 1px solid red; */
+   text-align: end;
+   height: 4vh;
+   font-size: 3vh;
+padding-top: 1vh;
+padding-right: 5px;
+  
+}
+.bottomScreen{
+  
+    text-align: end;
+    /*border: 1px solid purple; */ 
+    font-size: 5vh;
+    padding-right: 5px;
+}
+
+.buttonWrapper {
+  
+  border: 1px solid lime;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ gap: 5px;
+  margin:0 auto;
+height: 50vh;
+
+
+}
+
+.funcButtons{
+
+
+    border: 1px solid lime;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 5px;
+    margin:0 auto;
+    margin-bottom: 5px;
+    font-size: 2em;
+
+}
+
