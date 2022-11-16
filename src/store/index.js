@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const counterSlice = createSlice({
@@ -5,8 +6,11 @@ const counterSlice = createSlice({
   initialState: { counter: [], total: null, symbol: "" },
   reducers: {
     inputNumber(state, action) {
+      if (state.total && !state.symbol) {
+        return;
+      }
+
       state.counter = [...state.counter, [action.payload]];
-      //console.log(state.counter);
     },
     plus(state, action) {
       if (parseInt(state.counter) === null) {
@@ -16,11 +20,9 @@ const counterSlice = createSlice({
         state.symbol = action.payload;
       }
       if (state.counter.length) {
-        console.log("plus");
         state.total += parseFloat(state.counter.join(""));
         state.counter = [];
         state.symbol = action.payload;
-        //console.log(state.symbol);
       }
     },
 
@@ -62,8 +64,6 @@ const counterSlice = createSlice({
 
       state.counter = [];
       state.symbol = action.payload;
-
-      
     },
     divide(state, action) {
       if (!state.counter.length && state.total === null) {
@@ -84,36 +84,39 @@ const counterSlice = createSlice({
 
       state.counter = [];
       state.symbol = action.payload;
-
     },
 
     equals(state, action) {
+
+      if(!parseFloat(state.counter.join(""))  &&  state.symbol){
+
+return
+
+      }
       if (state.counter.length < 0 || state.total === null) {
         return;
       }
-
-      if (state.symbol === "+") {
-        state.total += parseFloat(state.counter.join(""));
-        state.symbol = "";
-        state.counter = [];
-      }
-
-      if (state.symbol === "-") {
-        state.total -= parseFloat(state.counter.join(""));
-        state.symbol = "";
-        state.counter = [];
-      }
-      if (state.symbol === "*") {
-        console.log(state.symbol);
-        state.total *= parseFloat(state.counter.join(""));
-        state.symbol = "";
-        state.counter = [];
-      }
-
-      if (state.symbol === "/") {
-        state.total /= parseFloat(state.counter.join(""));
-        state.symbol = "";
-        state.counter = [];
+      switch (state.symbol) {
+        case "+":
+          state.total += parseFloat(state.counter.join(""));
+          state.symbol = "";
+          state.counter = [];
+          break;
+        case "-":
+          state.total -= parseFloat(state.counter.join(""));
+          state.symbol = "";
+          state.counter = [];
+          break;
+        case "*":
+          state.total *= parseFloat(state.counter.join(""));
+          state.symbol = "";
+          state.counter = [];
+          break;
+        case "/":
+          state.total /= parseFloat(state.counter.join(""));
+          state.symbol = "";
+          state.counter = [];
+          break;
       }
     },
     allClear(state, action) {

@@ -38,7 +38,6 @@ function App() {
   return (
     <div className="App">
       <div className={style.wrapper}>
-      
         <section className={style.screen}>
           <div className={style.topScreen}>{counter}</div>
           <div className={style.bottomScreen}>
@@ -47,31 +46,66 @@ function App() {
           </div>
         </section>
         <div className={style.funcButtons}>
-          <button className={style.topButton}  onClick={() => allClear()}>AC</button>
-          <button className={style.topButton}  onClick={() => backDelete()}>del</button>
+          <button className={style.topButton} onClick={() => allClear()}>
+            AC
+          </button>
+          <button className={style.topButton} onClick={() => backDelete()}>
+            del
+          </button>
         </div>
-      
-          <section className={style.buttonWrapper}>
-            <button className={style.numberButton} onClick={() => inputNumber(7)}>7</button>
-            <button className={style.numberButton} onClick={() => inputNumber(8)}>8</button>
-            <button className={style.numberButton} onClick={() => inputNumber(9)}>9</button>
-            <button  className={style.funcButton} onClick={() => multiply("*")}>x</button>
-            <button className={style.numberButton} onClick={() => inputNumber(4)}>4</button>
-            <button className={style.numberButton} onClick={() => inputNumber(5)}>5</button>
-            <button className={style.numberButton} onClick={() => inputNumber(6)}>6</button>
-            <button   className={style.funcButton} onClick={() => divide("/")}>÷</button>
-            <button className={style.numberButton} onClick={() => inputNumber(1)}>1</button>
-            <button className={style.numberButton} onClick={() => inputNumber(2)}>2</button>
-            <button className={style.numberButton} onClick={() => inputNumber(3)}>3</button>
-            <button   className={style.funcButton} onClick={() => minus("-")}>-</button>
-            <button className={style.numberButton} onClick={() => inputNumber(0)}>0</button>
-            <button  className={style.funcButton}  onClick={() => inputNumber(".")}>.</button>
-            <button   className={style.funcButton} onClick={() => equals()}>=</button>
-            <button   className={style.funcButton} onClick={() => plus("+")}>+</button>
-          </section>
-        </div>
-      </div>
 
+        <section className={style.buttonWrapper}>
+          <button className={style.numberButton} onClick={() => inputNumber(7)}>
+            7
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(8)}>
+            8
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(9)}>
+            9
+          </button>
+          <button className={style.funcButton} onClick={() => multiply("*")}>
+            x
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(4)}>
+            4
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(5)}>
+            5
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(6)}>
+            6
+          </button>
+          <button className={style.funcButton} onClick={() => divide("/")}>
+            ÷
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(1)}>
+            1
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(2)}>
+            2
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(3)}>
+            3
+          </button>
+          <button className={style.funcButton} onClick={() => minus("-")}>
+            -
+          </button>
+          <button className={style.numberButton} onClick={() => inputNumber(0)}>
+            0
+          </button>
+          <button className={style.funcButton} onClick={() => inputNumber(".")}>
+            .
+          </button>
+          <button className={style.funcButton} onClick={() => equals()}>
+            =
+          </button>
+          <button className={style.funcButton} onClick={() => plus("+")}>
+            +
+          </button>
+        </section>
+      </div>
+    </div>
   );
 }
 
