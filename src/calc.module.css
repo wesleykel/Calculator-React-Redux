@@ -4,7 +4,7 @@
   width: 30vw;
   height: 80vh;
   padding-top: 1em;
-  background-color: beige;
+  background-color:#dde2c6;
   border-radius: 5px;
 }
 
@@ -15,7 +15,7 @@
   margin: 0 auto;
   margin-top: 1em;
   margin-bottom: 1em;
- background-color: azure;
+ background-color: rgba(240, 255, 255, 0.904);
 
  border-radius: 5px;
 
@@ -79,7 +79,7 @@ border-radius: 6px;
 .funcButton{
     border: 1px solid lightgrey;
     border-radius: 6px;
-    background-color: rgba(0, 0, 233, 0.699);
+    background-color: #090c02;
     font-size: 2em;
 color: white;
 
@@ -88,7 +88,7 @@ color: white;
 .topButton{
 
     font-size: 25px;
-    background-color:orange;
+    background-color:#a72608;
 border: none;
 border-radius: 6px;
 
