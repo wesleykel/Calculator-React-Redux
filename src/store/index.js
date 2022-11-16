@@ -87,11 +87,8 @@ const counterSlice = createSlice({
     },
 
     equals(state, action) {
-
-      if(!parseFloat(state.counter.join(""))  &&  state.symbol){
-
-return
-
+      if (!parseFloat(state.counter.join("")) && state.symbol) {
+        return;
       }
       if (state.counter.length < 0 || state.total === null) {
         return;
@@ -99,6 +96,7 @@ return
       switch (state.symbol) {
         case "+":
           state.total += parseFloat(state.counter.join(""));
+
           state.symbol = "";
           state.counter = [];
           break;
@@ -108,12 +106,22 @@ return
           state.counter = [];
           break;
         case "*":
-          state.total *= parseFloat(state.counter.join(""));
+          let b = state.total * parseFloat(state.counter.join(""));
+          if (b % 1 === 0) {
+            state.total = state.total *= parseFloat(state.counter.join(""));
+          } else {
+            state.total = b.toFixed(3);
+          }
           state.symbol = "";
           state.counter = [];
           break;
         case "/":
-          state.total /= parseFloat(state.counter.join(""));
+          let a = state.total / parseFloat(state.counter.join(""));
+          if (a % 1 === 0) {
+            state.total = state.total /= parseFloat(state.counter.join(""));
+          } else {
+            state.total = a.toFixed(3);
+          }
           state.symbol = "";
           state.counter = [];
           break;
@@ -123,12 +131,10 @@ return
       state.total = null;
       state.counter = [];
       state.symbol = "";
-      console.log("all clear");
     },
 
     backDelete(state, action) {
       state.counter.pop();
-      console.log("delete");
     },
   },
 });
