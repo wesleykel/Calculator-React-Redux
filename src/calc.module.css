@@ -1,20 +1,23 @@
 .wrapper {
   margin: 0 auto;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   width: 30vw;
   height: 80vh;
+  padding-top: 1em;
+  background-color: beige;
+  border-radius: 5px;
 }
 
 .screen {
-  border: 1px solid black;
+  border: 1px solid blanchedalmond;
   height:13vh;
   width: 90%;
   margin: 0 auto;
   margin-top: 1em;
   margin-bottom: 1em;
- 
+ background-color: azure;
 
-
+ border-radius: 5px;
 
 }
 
@@ -37,7 +40,7 @@ padding-right: 5px;
 
 .buttonWrapper {
   
-  border: 1px solid lime;
+  /*border: 1px solid lime;*/
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -51,14 +54,44 @@ height: 50vh;
 .funcButtons{
 
 
-    border: 1px solid lime;
+   /* border: 1px solid lime;*/
     width: 90%;
     display: grid;
+    height: 8vh;
     grid-template-columns: 1fr 1fr ;
     gap: 5px;
     margin:0 auto;
     margin-bottom: 5px;
+    font-size: 5em;
+
+}
+
+.numberButton{
+
+font-size: 2em;
+background-color:white;
+border: 1px solid lightgrey;
+border-radius: 6px;
+
+
+}
+
+.funcButton{
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 233, 0.699);
     font-size: 2em;
+color: white;
+
+}
+
+.topButton{
+
+    font-size: 25px;
+    background-color:orange;
+border: none;
+border-radius: 6px;
+
 
 }
 
